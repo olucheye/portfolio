@@ -1,0 +1,405 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Olucheye's Portfolio Page</title>
+    <link rel="stylesheet" href="public/build/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+</head>
+
+<body style="background-color: #021D44;">
+
+    <header class="flex m-6 items-center justify-between lg:my-10 lg:mx-20">
+        <div class="nav-brand">
+            <img src="/img/o1.png" alt="personal-brand-logo" class="h-16 rounded-full" onclick="load()">
+        </div>
+        <div style="color:#FF3E55 ;" class="font-bold text-sm md:text-lg" id="nav">
+            <a href="#" id="navWork" onclick="myProjects()">WORKS</a>
+            <a href="#" class="mx-2" id="navAbout" onclick="aboutMe()">ABOUT</a>
+            <a href="#" id="navContact" onclick="contactMe()">CONTACT</a>
+        </div>
+    </header>
+
+    <!------ Div Switches onClick------------>
+    <div class="w-4/5 md:h-auto mx-auto">
+
+        <!----- Landing Page Section-- -->
+        <div class="mt-20 lg:mt-32" style="color: #F7F6F5;" id="self">
+
+            <div>
+
+                <h1 class="w-32 text-center rounded-lg font-bold text-3xl md:text-5xl md:w-48" style="background-color:#F7F6F5 ; color: #021D44;">Hello !</h1>
+
+                <h2 class="leading-snug font-normal py-12 text-2xl md:text-4xl md:pt-20 md:pb-12" style="color: #FF3E55;">
+
+                    <span class="font-bold" style="color: #F7F6F5;">I am</span>
+                    
+                    Oluwaseye Olofinyo
+                
+                </h2>
+
+                <p class="text-center leading-relaxed font-hairline border-double border-t border-b p-2 text-lg md:text-3xl md:p-4"> 
+                    Cloud Architect / Frontend Developer
+                </p>
+
+                <!----- Add new window target to the the social icons-->
+                <div class="mt-12 text-center md:mt-16">
+                    <a href="https://www.linkedin.com/in/oluwaseyeolofinyo" target="_blank">
+                        <span style="color:">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                        </span> 
+                    </a>
+                    <a href="https://medium.com/@olucheye" class="ml-4 md:ml-8" target="_blank">
+                        <span style="color: #;">
+                            <i class="fab fa-medium fa-lg"></i>
+                        </span> 
+                    </a>
+                    <a href="https://twitter.com/olucheye" class="ml-4 md:ml-8">
+                        <span style="color: #;">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </span> 
+                    </a>
+                    <a href="https://github.com/olucheye" class="ml-4 md:ml-8">
+                        <span style="color: #;">
+                            <i class="fab fa-github fa-lg"></i>
+                        </span> 
+                    </a>
+                </div>
+
+                <!----- Add new works function target to the the social icons-->
+                <div class="mt-20 text-center" onclick="myProjects()">
+                    <a href="#" onclick="myProjects()" class="rounded-full px-12 py-4 font-bold shadow-lg md:text-2xl hover:shadow-2xl" style="background-color: #F7F6F5; color: #021D44;">
+                    
+                        View My Portfolio 
+                        
+                        <span class="pl-2">
+                        <i class="fas fa-arrow-right" style="color: #FF3E55;"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <!------------- proposed hero image
+             <div class="lg:w-5/12 float-right">
+                <img src="img/web.png" alt="developer-image">
+            </div>    
+            ------------------->
+        </div>
+
+        <!----- Works Section by default hidden on load--- -->
+        <div id="projects" class="lg:mt-20">
+            <div class="text-base font-bold p-6 md:text-2xl xl:text-3xl">
+                <h1 class="w-48 pb-2" style="color: #F7F6F5;">MY WORKS</h1>
+                <p class="border-solid border-red-500 border-t-4 w-12"></p>
+            </div>
+
+            <!--------------Project List-->
+
+            <div class="mx-auto">
+                <ul class="lg:flex flex-wrap sm:mx-auto">
+                    <li class="sm:mx-auto lg:w-1/3 max-w-md">
+                        <div class="bg-white m-4 rounded-lg mx-auto border-gray-200 border-solid border-4 md:m-10">
+
+                            <img src="img/developer.jpg" alt="project-image" class="rounded-sm shadow-inner">
+
+                            <div class="p-6" style="background-color: #021D44;" id="project">
+        
+                                <p class="text-white font-hairline text-sm md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">PROJECT TITLE:</span> 
+                                     Team Beta's Landing Page
+                                </p>
+        
+                                <p class="text-white font-hairline text-base md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">DESCRIPTION:</span>
+                                    Landing Page Design
+                                </p>
+        
+                                <p class="text-white font-hairline text-base md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">STACK:</span>
+                                    BootStrap4 & CSS3
+                                </p>
+        
+                                <div class="mt-8 text-center">
+                                    <a href="https://clip.ng/IbAN" target="_blank" class="rounded-full px-8 py-2 font-bold text-sm md:text-lg" style="background-color: #F7F6F5; color: #021D44;">View Project</a>
+                                </div>
+                                
+                            </div>
+        
+                        </div>
+
+                    </li>
+                    <li class="sm:mx-auto lg:w-1/3 max-w-md">
+                        <div class="bg-white m-4 rounded-lg mx-auto border-gray-200 border-solid border-4 md:m-10">
+                            <img src="img/developer.jpg" alt="project-image" class="rounded-sm shadow-inner">
+                            <div class="p-6" style="background-color: #021D44;" id="project">
+        
+                                <h4 class="text-white font-hairline text-sm md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">PROJECT TITLE:</span> 
+                                     Team Beta's Landing Page
+                                </h4>
+        
+                                <p class="text-white font-hairline text-base md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">DESCRIPTION:</span>
+                                    Landing Page Design
+                                </p>
+        
+                                <p class="text-white font-hairline text-base md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">STACK:</span>
+                                    BootStrap4 & CSS3
+                                </p>
+        
+                                <div class="mt-8 text-center">
+                                    <a href="https://clip.ng/IbAN" target="_blank" class="rounded-full px-8 py-2 font-bold md:text-lg" style="background-color: #F7F6F5; color: #021D44;">View Project</a>
+                                </div>
+                                
+                            </div>
+        
+                        </div>
+
+                    </li>
+
+                    <li class="sm:mx-auto lg:w-1/3  max-w-md">
+                        <div class="bg-white m-4 rounded-lg mx-auto border-gray-200 border-solid border-4 md:m-10">
+                            <img src="img/developer.jpg" alt="project-image" class="rounded-sm shadow-inner">
+                            <div class="p-6" style="background-color: #021D44;" id="project">
+        
+                                <h4 class="text-white font-hairline text-sm md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">PROJECT TITLE:</span> 
+                                     Team Beta's Landing Page
+                                </h4>
+        
+                                <p class="text-white font-hairline text-base md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">DESCRIPTION:</span>
+                                    Landing Page Design
+                                </p>
+        
+                                <p class="text-white font-hairline text-base md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">STACK:</span>
+                                    BootStrap4 & CSS3
+                                </p>
+        
+                                <div class="mt-8 text-center">
+                                    <a href="https://clip.ng/IbAN" target="_blank" class="rounded-full px-8 py-2 font-bold md:text-lg" style="background-color: #F7F6F5; color: #021D44;">View Project</a>
+                                </div>
+                                
+                            </div>
+        
+                        </div>
+
+                    </li>
+
+                    <li class="sm:mx-auto lg:w-1/3 max-w-md">
+                        <div class="bg-white m-4 rounded-lg mx-auto border-gray-200 border-solid border-4 md:m-10">
+                            <img src="img/developer.jpg" alt="project-image" class="rounded-sm shadow-inner">
+                            <div class="p-6" style="background-color: #021D44;" id="project">
+        
+                                <h4 class="text-white font-hairline text-sm md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">PROJECT TITLE:</span> 
+                                     Team Beta's Landing Page
+                                </h4>
+        
+                                <p class="text-white font-hairline text-base md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">DESCRIPTION:</span>
+                                    Landing Page Design
+                                </p>
+        
+                                <p class="text-white font-hairline text-base md:text-xl">
+                                    <span class="text-orange-400 font-medium text-sm md:text-lg">STACK:</span>
+                                    BootStrap4 & CSS3
+                                </p>
+        
+                                <div class="mt-8 text-center">
+                                    <a href="https://clip.ng/IbAN" target="_blank" class="rounded-full px-8 py-2 font-bold md:text-lg" style="background-color: #F7F6F5; color: #021D44;">View Project</a>
+                                </div>
+                                
+                            </div>
+        
+                        </div>
+
+                    </li>
+                </ul>
+            </div> 
+
+        </div>
+
+         <!----- About Me Section by default hidden on load--- -->
+        <div id="about" class="lg:mt-20">
+            <div class="text-base font-bold md:text-2xl xl:text-3xl">
+                <h1 class="w-40 pb-2" style="color: #F7F6F5;">ABOUT ME</h1>
+                <p class="border-solid border-red-500 border-t-4 w-12"></p>
+            </div>
+
+            <div class="block m-4 md:text-xl lg::text-2xl xl:text-3xl" style="color: #F7F6F5;">
+                <h3 class="font-semibold"> I'm a Technical Consultant with about 5years of Professional work experience that spans IT Service Support, Enterprise IT Management & Software Development.</h3>
+
+                <br>
+
+                <p class="font-thin"> Trained by the best hands at Andela, HNG6.0 Internship, I have worked on multiple internal projects like SkillsTree, start.ng, itarj.com<br><br><br>
+                    
+               <span class="font-semibold">Intersted in working together?</span>  <br> Feel Free to contact me for any project or collaboration
+                    
+                </p>
+
+                <!------------ Contact Information and Social Icons-->
+                <div class="mt-12">
+                    <!------ Contact information-->
+                    <p>
+                        <span style="color: #FF3E55;">
+                            <i class="fas fa-paper-plane fa-lg"></i>
+                        </span>
+                        <a href="mailto:olucheye@icloud.com" class="ml-5 md:text-2xl font-semibold" style="color: #0098FF;"> olucheye@icloud.com</a>
+                    </p> 
+
+                    <p class="mt-4">
+                        <span style="color: #FF3E55;">
+                            <i class="fas fa-phone-alt fa-lg"></i>
+                        </span>
+                        <a href="tel:+2348030947550" class="ml-5 md:text-2xl font-semibold" >(+234) 803-094-7550</a>
+                    </p> 
+
+                    <!-----------Social Icons-------->
+                    <div class="mt-16 text-center">
+                        <a href="https://www.linkedin.com/in/oluwaseyeolofinyo" target="_blank">
+                            <span style="color: #bfbfbf;">
+                                <i class="fab fa-linkedin-in fa-lg"></i>
+                            </span> 
+                        </a>
+                        <a href="https://medium.com/@olucheye" class="ml-4 md:ml-8" target="_blank">
+                            <span style="color: #bfbfbf;">
+                                <i class="fab fa-medium fa-lg"></i>
+                            </span> 
+                        </a>
+                        <a href="https://twitter.com/olucheye" class="ml-4 md:ml-8">
+                            <span style="color: #bfbfbf;">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </span> 
+                        </a>
+                        <a href="https://github.com/olucheye" class="ml-4 md:ml-8">
+                            <span style="color: #bfbfbf;">
+                                <i class="fab fa-github fa-lg"></i>
+                            </span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--------Contact Form-->
+        <div class="pt-8 px-6 " id="sendMessage">
+
+            <div class="text-base font-bold p-6 md:text-2xl hidden lg:block">
+                <h1 class="w-auto pb-2" style="color: #F7F6F5;">CONTACT ME</h1>
+                <p class="border-solid border-red-500 border-t-4 w-12"></p>
+            </div>
+
+            <div class="lg:w-10/12 lg:flex lg:mx-auto lg:mt-16">
+                <div class="lg:float-right lg:w-4/12 lg:py-4">
+                    <img src="img/sendEmail.png" alt="" class="sm:h-32 md:h-64 mx-auto lg:h-auto">
+                </div>
+                
+                <div class="lg:float-left lg:w-7/12 xl:mt-2">
+                    <form action="post" class="w-full max-w mt-8 md:mt-16">
+                        <div class="border-b border-b-2 border-teal-500 py-2 my-4">
+                            <input class="appearance-none bg-transparent border-none w-full text-gray-400 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" placeholder="Name" aria-label="Full name">
+                        </div>
+                        <div class="border-b border-b-2 border-teal-500 py-2 my-4">
+                            <input class="appearance-none bg-transparent border-none w-full text-gray-400 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" placeholder="Subject" aria-label="Full name">
+                        </div>
+                        <div class="border-b border-b-2 border-teal-500 py-2 my-4">
+                            <input class="appearance-none bg-transparent border-none w-full text-gray-400 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" placeholder="More details" aria-label="Full name">
+                        </div>
+                        <!---- Subscribe to newsletter-->
+                        <label class="md:w-2/3 block font-semibold my-8">
+                            <input class="leading-tight" type="checkbox">
+                            <span class="text-base md:text-lg" style="color: #0098FF;">
+                                Send me your newsletter!
+                            </span>
+                        </label>
+                        <!---- Send Button------>
+                        <div class="md:w-2/3 mt-4 lg:w-full">
+                            <button class="flex-shrink-0 text-lg text-white font-semibold py-2 px-4 rounded md:py-4 md:px-12 lg:py-2 lg:px-10" type="button" style="background-color: #0098FF;">
+                                SEND
+                                <span style="color: #FF3E55;" class="ml-1 md:ml-5">
+                                    <i class="fas fa-paper-plane fa-lg"></i>
+                                </span>
+                                
+                            </button>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+          
+        </div>
+        
+    </div>
+
+    <footer class="mt-32 mb-12">
+        <div class="inline-block float-right mr-16">
+            <img src="img/send-message.png" alt="send-message icon" id="sendEmail" class="">
+        </div>
+    </footer>
+
+</body>
+
+
+<script>
+
+    window.onload = load();
+    // On load, load self,
+    function load(){
+    document.getElementById('self').style.display = "block";
+    document.getElementById('projects').style.display = "none";
+    document.getElementById('about').style.display = "none";
+    document.getElementById('sendMessage').style.display = "none";
+    }
+
+    //NAV ITEMS
+    var myProjects = function(){
+        document.getElementById('navWork').addEventListener('click', function(){
+            document.getElementById('projects').style.display = "block";
+            document.getElementById('self').style.display = "none";
+            document.getElementById('about').style.display = "none";
+            document.getElementById('sendMessage').style.display = "none";
+        });
+    }
+
+    myProjects();
+    
+    var sendMessage = function(){
+        document.getElementById('sendEmail').addEventListener('click', function(){
+            document.getElementById('projects').style.display = "none";
+            document.getElementById('self').style.display = "none";
+            document.getElementById('about').style.display = "none";
+            document.getElementById('sendMessage').style.display = "block";
+            document.getElementById('sendEmail').style.display = "none";
+        });
+    }
+    sendMessage();
+
+    var aboutMe = function(){
+        document.getElementById('navAbout').addEventListener('click', function(){
+            document.getElementById('projects').style.display = "none";
+            document.getElementById('self').style.display = "none";
+            document.getElementById('about').style.display = "block";
+            document.getElementById('sendMessage').style.display = "none";
+            document.getElementById('sendEmail').style.display = "block";
+        });
+    }
+    aboutMe();
+
+    var contactMe = function(){
+        document.getElementById('navContact').addEventListener('click', function(){
+            document.getElementById('projects').style.display = "none";
+            document.getElementById('self').style.display = "none";
+            document.getElementById('about').style.display = "none";
+            document.getElementById('sendMessage').style.display = "block";
+            document.getElementById('sendEmail').style.display = "none";
+        });
+    }
+    contactMe();
+
+</script>
+
+</html>

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Olucheye's Portfolio Page</title>
+    <title>Olucheye's Portfolio</title>
     <link rel="stylesheet" href="public/build/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="icon" href="https://res.cloudinary.com/dulniapvg/image/upload/v1574570196/icons%20-hng/matthew_wpqfbx.png">
 </head>
 
 <body style="background-color: #021D44;">
@@ -18,7 +19,7 @@
         <div style="color:#FF3E55 ;" class="font-bold text-sm md:text-lg" id="nav">
             <a href="#" id="navWork" onclick="myProjects()">WORKS</a>
             <a href="#" class="mx-2" id="navAbout" onclick="aboutMe()">ABOUT</a>
-            <a href="#" id="navContact" onclick="contactMe()">CONTACT</a>
+            <!-----<a href="#" id="navContact" onclick="contactMe()">CONTACT</a> ---->
         </div>
     </header>
 
@@ -273,12 +274,12 @@
                                 <i class="fab fa-medium fa-lg"></i>
                             </span> 
                         </a>
-                        <a href="https://twitter.com/olucheye" class="ml-4 md:ml-8">
+                        <a href="https://twitter.com/olucheye" target="_blank" class="ml-4 md:ml-8">
                             <span style="color: #bfbfbf;">
                                 <i class="fab fa-twitter fa-lg"></i>
                             </span> 
                         </a>
-                        <a href="https://github.com/olucheye" class="ml-4 md:ml-8">
+                        <a href="https://github.com/olucheye" target="_blank" class="ml-4 md:ml-8">
                             <span style="color: #bfbfbf;">
                                 <i class="fab fa-github fa-lg"></i>
                             </span> 
@@ -287,121 +288,47 @@
                 </div>
             </div>
         </div>
-
-        <!--------Contact Form-->
-        <div class="pt-8 px-6 " id="sendMessage">
-
-            <div class="text-base font-bold p-6 md:text-2xl hidden lg:block">
-                <h1 class="w-auto pb-2" style="color: #F7F6F5;">CONTACT ME</h1>
-                <p class="border-solid border-red-500 border-t-4 w-12"></p>
-            </div>
-
-            <div class="lg:w-10/12 lg:flex lg:mx-auto lg:mt-16">
-                <div class="lg:float-right lg:w-4/12 lg:py-4">
-                    <img src="img/sendEmail.png" alt="" class="sm:h-32 md:h-64 mx-auto lg:h-auto">
-                </div>
-                
-                <div class="lg:float-left lg:w-7/12 xl:mt-2">
-                    <form action="post" class="w-full max-w mt-8 md:mt-16">
-                        <div class="border-b border-b-2 border-teal-500 py-2 my-4">
-                            <input class="appearance-none bg-transparent border-none w-full text-gray-400 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" placeholder="Name" aria-label="Full name">
-                        </div>
-                        <div class="border-b border-b-2 border-teal-500 py-2 my-4">
-                            <input class="appearance-none bg-transparent border-none w-full text-gray-400 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" placeholder="Subject" aria-label="Full name">
-                        </div>
-                        <div class="border-b border-b-2 border-teal-500 py-2 my-4">
-                            <input class="appearance-none bg-transparent border-none w-full text-gray-400 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" placeholder="More details" aria-label="Full name">
-                        </div>
-                        <!---- Subscribe to newsletter-->
-                        <label class="md:w-2/3 block font-semibold my-8">
-                            <input class="leading-tight" type="checkbox">
-                            <span class="text-base md:text-lg" style="color: #0098FF;">
-                                Send me your newsletter!
-                            </span>
-                        </label>
-                        <!---- Send Button------>
-                        <div class="md:w-2/3 mt-4 lg:w-full">
-                            <button class="flex-shrink-0 text-lg text-white font-semibold py-2 px-4 rounded md:py-4 md:px-12 lg:py-2 lg:px-10" type="button" style="background-color: #0098FF;">
-                                SEND
-                                <span style="color: #FF3E55;" class="ml-1 md:ml-5">
-                                    <i class="fas fa-paper-plane fa-lg"></i>
-                                </span>
-                                
-                            </button>
-                        </div>
-                    </form>
-                </div> 
-            </div>
-          
-        </div>
         
     </div>
-
-    <footer class="mt-32 mb-12">
-        <div class="inline-block float-right mr-16">
-            <img src="img/send-message.png" alt="send-message icon" id="sendEmail" class="">
-        </div>
-    </footer>
-
 </body>
 
 
 <script> 
 
+    let self = document.getElementById('self');
+    let projects = document.getElementById('projects');
+    let about = document.getElementById('about');
+    let navWork = document.getElementById('navWork');
+    let navAbout = document.getElementById('navAbout');
+
     let projectsDisplay = () => {
         document.getElementById('projects').style.display = "block";
         document.getElementById('self').style.display = "none";
         document.getElementById('about').style.display = "none";
-        document.getElementById('sendMessage').style.display = "none";
     }
 
     
     window.onload = load();
-    // On load, load self,
+    // Windows On load, load self & hides other Divs,
     function load(){
-    document.getElementById('self').style.display = "block";
-    document.getElementById('projects').style.display = "none";
-    document.getElementById('about').style.display = "none";
-    document.getElementById('sendMessage').style.display = "none";
+    self.style.display = "block";
+    projects.style.display = "none";
+    about.style.display = "none";
     }
 
-    //NAV ITEMS
-    let myProjects = function(){
-        document.getElementById('navWork').addEventListener('click', projectsDisplay());
+    //Nav items on click
+    let myProjects = () => {
+        navWork.addEventListener('click', projectsDisplay());
     }
-    
-    var sendMessage = function(){
-        document.getElementById('sendEmail').addEventListener('click', function(){
-            document.getElementById('projects').style.display = "none";
-            document.getElementById('self').style.display = "none";
-            document.getElementById('about').style.display = "none";
-            document.getElementById('sendMessage').style.display = "block";
-            document.getElementById('sendEmail').style.display = "none";
-        });
-    }
-    sendMessage();
 
-    var aboutMe = function(){
-        document.getElementById('navAbout').addEventListener('click', function(){
-            document.getElementById('projects').style.display = "none";
-            document.getElementById('self').style.display = "none";
-            document.getElementById('about').style.display = "block";
-            document.getElementById('sendMessage').style.display = "none";
-            document.getElementById('sendEmail').style.display = "block";
+    let aboutMe = () => {
+        navAbout.addEventListener('click', function(){
+            projects.style.display = "none";
+            self.style.display = "none";
+            about.style.display = "block";
         });
     }
     aboutMe();
-
-    var contactMe = function(){
-        document.getElementById('navContact').addEventListener('click', function(){
-            document.getElementById('projects').style.display = "none";
-            document.getElementById('self').style.display = "none";
-            document.getElementById('about').style.display = "none";
-            document.getElementById('sendMessage').style.display = "block";
-            document.getElementById('sendEmail').style.display = "none";
-        });
-    }
-    contactMe();
 
 </script>
 
